@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 태그</title>
+</head>
+<body>
+    <div>사용자에게 값을 입력 받을 때 사용</div>
+
+    <h2>text type</h2>
+    <input type="text" name="name" placeholder="이름을 입력해주세요."/>
+    <br />
+    <input type="text" name="phone" value="010-0000-0000"/>
+
+    <h2>button type</h2>
+    <input type="button" value="제출" />
+    <button type="button">제출</button>
+
+    <h2>password type</h2>
+    <input type="password" name="password" /> 
+
+    <h2>checkbox type</h2>
+    <!-- 이름을 똑같이하면 배열로 넘어간다 -->
+    <input type="checkbox" name="hobby" value="축구"/> 축구
+    <input type="checkbox" name="hobby" value="야구" checked/> 야구
+
+    <h2>radio type</h2>
+    <!-- name이 같은것을 찾는것 -->
+    <input type="radio" name="gender" value="남"/> 남자
+    <input type="radio" name="gender" value="여"/> 여자
+
+    <h2>radio2 type</h2>
+    <input type="radio" name="favorite" value="축구"/> 축구
+    <input type="radio" name="favorite" value="야구" id="야구"/> 
+    <!-- 글자를 클릭할 수 있도록한다. for 뒤에 id와 일치시킨다. -->
+    <label for="야구">야구</label>
+
+    <h2>date type</h2>
+    <input type="date" name="birth" />
+    <input type="datetime-local" name="birth" />
+
+    <h2>select tag</h2>
+    <select name="select-name">
+        <optgroup label="옵션1~2">
+            <option value="option">옵션1</option>
+            <option value="option2" selected>옵션2</option>
+        </optgroup>
+        <optgroup label="옵션3~4">
+            <option value="option3">옵션3</option>
+            <option value="option4" disabled>옵션4</option>
+        </optgroup>
+        
+        
+    </select>
+
+    <div>
+            <input type="text" name="email" value="sss@spr.com" disabled />
+    </div>
+    </body>
+</html>
