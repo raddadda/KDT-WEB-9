@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* div 다음 같은 부모인것들 */
         div ~ p {
             background-color : red;
         }
+        /* id는 # */
         div > ul > #tiger {
             background-color : yellow;
             
         }
+        /* class는 . */
         .lion{
             color :sienna;
         }
+
         div > ul > .lion {
             background-color : greenyellow;
             
             font-weight: 900;
         }
-        
+        /* +는 바로 다음것 */
         #tiger + li {
             background-color: skyblue;
         }

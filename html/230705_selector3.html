@@ -14,17 +14,72 @@
         .fruits h3:last-child {
             color : red;
         }
+        /* 2n : 2,4,6...   */
+        .fruits *:nth-child(n+2) {
+            background-color: green;
+            color : gold;
+        }
+        /* 괄호안에 것들을 제외한것 */
+        .fruits *:not(.orange) {
+            background-color: blueviolet;
+            
+        }
+     
+        div.example::after {
+            content: " 😇 ";
+        }
+        div.example::before{
+            content: " 🇰🇷 ";
+        }
+        /* 속성 선택자 */
+        [disabled]{
+            color : red;
+        }
+        /* *:not([disabled]){
+            color : brown;
+        } */
+        [type=text]{
+            background-color: green;
+        }
+        /* 자주쓰는 속성값을 변수화 시키는법*/
+        /* root = html */
+        :root {
+            --main-color : blue;
+            --main-bg-color: white;
+            --sub-color: skyblue; 
+            --font-size-big: 30px;
+        }
+        
+        div{
+            color : var(--main-color);
+            font-weight: 900;
+            font-size: var(--font-size-big);
+        }
+        p{
+            background-color: var(--main-color);
+        }
     </style>
 </head>
 <body>
     <div class="fruits">
-        <div>바나나</div>
+        <!-- <div>바나나</div> -->
         <span>딸기</span>
         <span>수박</span>
-        <div>오렌지</div>
+        <div class="orange">오렌지</div>
         <p>망고</p>
         <h3>사과</h3>
     </div>
 
+
+    <div class="example">
+        안녕하세요?
+    </div>
+
+
+    <input type="text" value="HEROPY" />
+    <input type="password" value="1234" />
+    <input type="text" value="ABCD" disabled/>
+    <div>가나다라마바사</div>
+    <p>가나다라마바사</p>
 </body>
 </html>
