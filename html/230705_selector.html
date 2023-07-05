@@ -5,29 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자 공부</title>
     <style> 
-    /* * 모든 태그가 적용 */
-        * {
-            color : red;
+    /* > : div 의 자식만 */
+        div > p {
+            color : navy;
         }
-        li {
-            color : blue;
+        div > ul > .orange {
+            color : orange;
+            
         }
-        .strawberry{
-            background-color: gray;
+        div .orange {
+            color: orange;
+            background-color: brown;
         }
-        /* id 선택자 */
-        #ex {
-            background-color: aqua;
+        span.orange {
+            color: orange;
+        }
+
+        #a.orange.apple {
+
+        }
+        /* 인접 형제 선택, 인접하지않으면 적용이 안된다. */
+        ul + p {
+            color: blueviolet;
+        }
+        /* apple 클래스 다음에 나오는 형제 li들 선택자 */
+        .apple ~ li {
+            font-weight: 900;
+            font-size: 30px;
         }
     </style>
 </head>
 <body>
-    <div id="ex" class="">안녕?</div>
-    <span>안녕하세요</span>
-    <ul>
-        <li>사과</li>
-        <li>딸기</li>
-        <li class="strawberry">오렌지</li>
+    <div>
+        <ul>
+            <li class="apple">사과</li>
+            <li>딸기</li>
+        <!-- <li class="strawberry">오렌지</li> -->
+            <li class="orange">오렌지</li>
         </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>  
+    </div>
 </body>
 </html>

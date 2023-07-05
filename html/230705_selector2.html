@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 커서올려놓을때 변함 */
+        a:hover {
+            color: red;
+        }
+        /* 누르고있을때 변함 */
+        a:active{
+            color: yellow;
+        }
+        button{
+            color: #43b5bb;
+        }
+        button:hover {
+            color: #de22c5fc;
+        }
+        button:active{
+            color:#43b5bb;
+            background-color: aquamarine;
+        }
+        
+        input:focus {
+            background-color: orange;
+        }
+        
+        /* - 이나 . 사용 */
+        div > .name-input:focus {
+            background-color: yellow;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <button type="button">제출</button>
+    이름 : <input class="name-input" type="text" name="name" placeholder="이름을 입력하세요."/>
+</body>
+</html>
