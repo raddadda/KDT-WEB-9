@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box{
-            width: 200px;
-            height: 100px;
-            background-color: aqua;
-        }
+      
         .border-1{
             border-color: black red blue sandybrown;
             /* solid 실선 */
@@ -18,19 +14,48 @@
         }
         .border-2{
             /* 픽셀, 선 모양, 선 색상순 */
-            /* border: 5px solid black; */
+            border: 5px solid black;
             /* border-top : 5px solid black; */
-            border-left: 5px solid red;
+            /* border-left: 5px solid red;
 
             border-top-color : black;
             border-top-style: solid;
-            border-top-width: 10px; 
+            border-top-width: 10px;  */
+
+            border-radius: 50%;
         }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .content-box{
+            box-sizing: content-box;
+            /* padding: 20px; */
+            border: 10px solid black ;
+            /* 자리차지안함 */
+            display: none;
+        }
+
+        .border-box:hover{
+            box-sizing: border-box;
+            padding: 20px;
+            border : 10px solid black;
+            /* 투명도 실습6 */
+            opacity: 0.7;
+            
+        }
+     
     </style>
 </head>
 <body>
-    <div class="box border-1"></div>
+    <!-- <div class="box border-1"></div>
     <br />
-    <div class="box border-2"></div>
+    <div class="box border-2"></div> -->
+
+    <div class="box content-box">ABC</div>
+    <br /><br />
+    <div class="box border-box">ABC</div>
+
 </body>
 </html>
