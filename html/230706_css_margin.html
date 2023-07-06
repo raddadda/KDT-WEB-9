@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            /* margin : auto 는 중앙 정렬 */
+        }
+        .block {
+            background-color: red;
+            color : white;
+            font-size: 2em;
+            width : 200px;
+            height : 200px;
+            /* margin-top : 100px;
+            margin-left : 100px; */
+            /* 위 오른쪽 아래 왼쪽 */
+            /* margin: 100px 20px 50px 100px; */
+            /* 위아래, 왼오 */
+            margin: 100px , 20px;
+            /* 패딩도 동일 */
+            padding-top : 50px;
+            padding-left : 50px;
+            /* auto 브라우저가 너비를 계산 */
+
+
+        }
+
+        .inline {
+            /* 인라인에서는 margin안됨, 패딩 됨 */
+            background-color: aqua;
+            margin-left: 100px;
+            padding-right: 100px;
+        }
+
+        .mm-width {
+            /* vh,vw 브라우저의 비율 100이 브라우저 원래 크기 */
+            background-color: red;
+            color : white;
+            font-size: 30px;
+            width: 80vw;
+            /* 라인높이와 기본높이는 똑같이해서 정렬 */
+            line-height : 100px;
+            height:100px;
+            /* 최대값 height도 같음 */
+            max-width: 1000px;
+            min-width: 300px;
+            /* calc : 계산 함수 */
+            width: calc(100vw - 300px);
+            margin: auto;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- margin은 외부 여백 / padding : 내부 여백  border(윤곽선) 기준으로 나눔-->
+    <div class="block"> 안녕</div> 
+    <span class="inline"> 안녕</span>
+
+    <div class="mm-width">dd</div>
+</body>
+</html>

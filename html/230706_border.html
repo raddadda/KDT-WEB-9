@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .border-1{
+            border-color: black red blue sandybrown;
+            /* solid 실선 */
+            border-style: solid dashed;   
+            border-width: 10px 5px;
+        }
+        .border-2{
+            /* 픽셀, 선 모양, 선 색상순 */
+            /* border: 5px solid black; */
+            /* border-top : 5px solid black; */
+            border-left: 5px solid red;
+
+            border-top-color : black;
+            border-top-style: solid;
+            border-top-width: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box border-1"></div>
+    <br />
+    <div class="box border-2"></div>
+</body>
+</html>
