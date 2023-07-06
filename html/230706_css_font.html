@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 글꼴 링크 방법 -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    
+    <style>
+         /* 임포트 방법 */
+        /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Ysabeau+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @font-face {
+            font-family: 'PilseungGothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/PilseungGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'KBO-Dia-Gothic_bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }     
+        :root {
+            font-size: 16px;
+        }
+        main {
+            font-size: 20px;
+            text-align: center;
+
+        }
+       
+
+        
+        .font-px {
+             /* 글자의 크기 */
+             /* px는 화면해상도에따라 다르다 */
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+            /* 가장 가까운 부모요소의 폰트사이즈를 기준으로 한다, 상위 요소의 배수 즉 1.5배 = 24px*/
+        .font-em {
+            font-size: 1.5em;
+            font-weight: 400;
+            font-family: 'Caprasimo', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Ysabeau SC', sans-serif;
+            /* 글꼴 */
+            /* font-family: serif; */
+        }
+        /* 가장 상위요소를 기준으로 한다 즉 root사이즈 */
+        .font-rem {
+            font-family: 'PilseungGothic';
+            font-size: 1.5rem;
+            /* 글자의 행, 간 조절 */
+            /* line-height : 2; */
+            line-height : 30px;
+        }
+        /* 상위를 기준 */
+        .font-per {
+            font-size: 100%;
+            /* 색상 : rgb()  */
+            color : #00ff80 ;
+            /* 텍스트 정렬 */
+            text-align: center;
+            /* none 없애기 */
+            text-decoration: underline;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        /* span div 디폴트값 */
+        span{
+            display: inline;
+        }
+        div {
+            display: block;
+        }
+        .inline-block{
+            /* inline-block 하면 width 적용됨 */
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- <div class="font-px">안녕하세요</div> -->
+        <div class="font-em">Whereas recognition of the inherent dignity</div>
+        <div class="font-rem">힘들면 맛있는게 먹고 싶다</div>
+        <div class="font-per">안녕하세요</div>
+    </main>
+    
+    <a href="123123">에이 태그</a>
+
+    <div>
+        <span></span>
+    </div>
+    <!-- inline요소는 width,height를 해도 적용안됨 -->
+    <div style="background-color: antiquewhite;"> div </div>
+    <span style="background-color: aqua;">span</span>
+
+    <div style="display: inline-block; background-color: #00ff80; width: 100px;">aaaaaa</div>
+    <span style="background-color: aqua;">span</span>
+</body>
+</html>
