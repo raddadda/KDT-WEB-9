@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            position: relative;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }     
+        img#skewX{
+            transform: skewY(35deg);
+        }
+        .item-1{
+            position: absolute;
+            transform: translate(70px,80px);
+            z-index: 3;
+        }
+        .item-2{
+            position: absolute;
+            transform: translate(150px,80px);
+            z-index: 2;
+        }
+        .item-3{
+            position: absolute;
+            transform: translate(230px,80px);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item-1">
+        <img
+        id="skewX"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+      /> </div>
+    <div class="item-2">
+        <img
+        id="skewX"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+      /> </div>
+    <div class="item-3">   
+        <img
+          id="skewX"
+          src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+        />  
+    </div>
+    </div>
+
+  
+</body>
+</html>

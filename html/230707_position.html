@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        
+        .flex-box{
+            background-color: aqua;
+            /* 자식 요소를 inline-block으로 만든다 */
+            display: flex;
+            /* 가로로 정렬시키기 column은 세로로 정렬 */
+            flex-direction: row;
+           
+            height: 500px;
+            /* text-align과 비슷 가운데 정렬*/
+            /* flex일때 사용 가능,(row의 반대방향)를 기준 정렬 */
+            align-items: center;
+             /* flex일때 사용 가능,(row)로 기준 정렬 */
+             justify-content:center;
+        }
+
+        .child-box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="child-box">
+
+        </div>
+        <div class="child-box">
+
+        </div>
+        <div class="child-box">
+
+        </div>
+    </div>
+</body>
+</html>

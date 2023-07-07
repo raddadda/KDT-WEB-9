@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+            height: 500px;
+            width: 500px ;
+            background-color: antiquewhite;
+            display : flex;
+            /* 시작점이 반대로 row reverse */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            /* wrap을 하면 크기 유지 및 다음줄로 넘어감 */
+            flex-wrap: wrap;
+            /* align-items: center; */
+            /* align-content: flex-start; */
+        }
+
+        .container > div
+         {
+            width: 100px;
+            height: 100px;
+        }
+      
+        .item-1{
+            background-color: rgb(114, 74, 20);
+        }
+        .item-2{
+            background-color: aqua;
+        }
+        .item-3{
+            background-color: blue;
+        }
+        .item-4{
+            background-color: aquamarine;
+        }
+        .item-5{
+            background-color: rgb(227, 255, 127);
+        }
+        .item-6{
+            background-color: rgb(127, 193, 255);
+        }
+        .item-7{
+            background-color: rgb(255, 127, 127);
+        }
+        .item-8{
+            background-color: rgb(255, 127, 253);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item-1"></div>
+        <div class="item-2"></div>    
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+        <div class="item-6"></div>    
+        <div class="item-7" ></div>
+        <div class="item-8"></div>
+    </div>
+
+  
+</body>
+</html>
