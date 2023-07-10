@@ -5,11 +5,11 @@ console.log(color);
 console.log(color.indexOf("black"));
 
 let reverse = new Array(color.length);
-// for(var j=color.length-1; j>=0; j--){
-//     reverse.push(color[j]);
-// }
-
-reverse = color.reverse();
+for(var j=color.length-1; j>=0; j--){
+    reverse.push(color[j]);
+}
+//reverse 함수
+// reverse = color.reverse();
 console.log(reverse);
 
 

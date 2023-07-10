@@ -5,11 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="../html/js/index.js">
+    <!-- <script src="../html/js/index.js"> -->
+    <script>
+        //배열 선언
+        let number = [1,2,3,4,5,6];
+        //object
+        let cat = {
+            name: '나비',
+            age : 1,
+            isCute : true,
+            mew: function() {
+                return '냐옹';
+            }
+        };
+        let dog = {
+            name: '초코'
+        }
+        cat.mew();
+        console.log(cat);
+        console.log(cat.name);
+        console.log(cat.age);
+        console.log(cat.mew());
+        console.log(dog);
+        console.log(dog.age);
+        //자료형 찾기
+        console.log(typeof cat.age);
+        console.log(typeof cat.name);
+        console.log(typeof null);
+        
+        //성적을 구하는 프로그램
 
-    </script> -->
-    <script src="../html/js/230710실습1.js">
+        //문자 -> 숫자 : Number()
+        //숫자 -> 문자 : String() or 값.toString();
+        let mathScore = Number(prompt("수학 점수를 입력 하세요"));
+    
+        let engScore = Number(prompt("영어 점수를 입력 하세요"));
+        
+        let avg = (mathScore+ engScore)/2;
+       
+        console.log(avg);
+        
+        let num = 123;
+        num = num.toString();
+        console.log(typeof num);
 
+        //연산자
+
+
+        let num2 = 1;
+        num2=5;
+        let numString= "5";
+
+        console.log(num2 == numString) 
+        console.log(num2 === numString) //타입까지 같아야한다.
+
+        console.log(num2%4) // 나머지
+        console.log(num2**2) // 지수
+        console.log(num*=5)
+
+        
+        num++;
+        ++num;
+        let x=5 , result;
+        result = x++; // result=5 x=6
+        result = --x; // result=6 x=5
+        
+        //비교연산자
+        console.log(true || true) //t
+        console.log(false && true)//f
+        console.log(!false)//t
+        
+        console.log(t>50 || t <= 20)
     </script>
 </head>
 <script>
