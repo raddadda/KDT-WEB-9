@@ -9,23 +9,55 @@
     <!-- TODO: css 파일을 연결해주세요. -->
     <link rel="stylesheet" href="../html/css/230710_실습3.css" />
     <style>
-        
+        .sun{
+            animation: sun 4s linear infinite;
+            /* background-color: ; */
+        }
+        .moon{
+            animation: moon 4s linear infinite;
+        }
+        .cloud_1{
+            width: 600;
+            animation: cloud-1 4s linear infinite;
+        }
+        .cloud_2{
+            width: 300;
+            animation: cloud-2 4s linear infinite;
+        }
+        .city{
+            animation: city 4s linear infinite;
+        }
+        @keyframes cloud-1{
+
+        }
+        @keyframes cloud-2{
+
+        }
+        @keyframes sun{
+
+        }
+        @keyframes moon{
+
+        }
+        @keyframes city{
+
+        }
+       
     </style>
   </head>
-
   <body>
     <section>
       <article class="sky">
         <!-- TODO: src 속성에 알맞은 이미지를 채워주세요. -->
-        <img src="#" alt="태양" class="sun" />
-        <img src="#" alt="달" class="moon" />
-        <img src="#" alt="큰 구름" class="cloud_1" />
-        <img src="#" alt="작은 구름" class="cloud_2" />
+        <img src="../img/sun.png" alt="태양" class="sun" />
+        <img src="../img/moon.png" alt="달" class="moon" />
+        <img src="../img/cloud.png" alt="큰 구름" class="cloud_1" />
+        <img src="../img/cloud.png" alt="작은 구름" class="cloud_2" />
       </article>
 
       <article class="city">
         <!-- TODO: src 속성에 알맞은 이미지를 채워주세요. -->
-        <img src="#" alt="도시" class="city_img" />
+        <img src="../img/city.png" alt="도시" class="city_img" />
       </article>
     </section>
   </body>
