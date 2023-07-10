@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div {
+            position : absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            animation: movecircle 3s linear 6;
+        }
+        @keyframes movecircle{
+            0%{
+                left:0;
+                top:0;
+            }
+            25%{
+                top:0;
+                left: 200px;
+            }
+            50%{
+                left: 200px;
+                top: 200px;
+                /* left: 200px; */
+            }
+            75%{
+                top:200px;
+                left:0;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

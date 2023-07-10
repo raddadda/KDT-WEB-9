@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        h1{
+            text-align: center;
+        }
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #d7d3d3;
+            padding: 0 20px;
+            margin-bottom: 50px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+        .header-1 {
+            line-height: 45pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-1 > ul > li {
+            margin-left: 30pt;
+        }
+        .header-2 {
+            line-height: 45pt;
+        }
+        .header-3 > ul > li {
+            margin-left: 30pt;
+        }
+       
+        .header-3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 45pt;
+        }
+
+        .header-4 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 45pt;
+               
+        }
+        .left {
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .left > li {
+            margin-left: 30pt;
+        }
+        .left > ul {
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+        }
+        .left > ul >li {
+            margin-right: 30pt;
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+            }
+        .right > li {
+        margin-left: 30pt;
+        }
+      
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Flex를 이용해 여러 종류의 Header를 만들어보자!
+    </h1>
+    <!-- 1 -->
+    <header>
+        <div class="header-1">
+            <span>LOGO</span>
+            <ul class="menu">
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 2 -->
+    <header>
+        <div class="header-2">
+            <ul class="menu">
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+            </ul>
+        </div>
+    </header>
+   <!-- 3 -->
+   <header>
+    <div class="header-3">
+        <span>LOGO</span>
+        <ul class="menu">
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+        </ul>
+        <span>LOGIN</span>
+    </div>
+    </header>
+    <!-- 4 -->
+    <header>
+        <div class="header-4">
+            
+            <ul class="left">
+                <span>LOGO</span>
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+            </ul>
+
+            <ul class="right">
+                <li>LOGIN</li>
+                <li>SIGNUP</li>
+            </ul>
+        </div>
+    </header>
+    
+</body>
+</html>

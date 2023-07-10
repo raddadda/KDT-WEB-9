@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            position: absolute;
+            animation: movefont 3s infinite ;
+
+        }
+
+        /* width 설정해야 오른쪽부터 폰트가 밀려나오지 않는다 */
+        /* 텍스트에서는 margin을 사용해보자 */
+        @keyframes movefont {
+            from {
+                width: 300%;
+                margin-left: 100vw;
+            }
+            to{
+                margin-left: 0vw;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        “As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place I’ve been looking for all my life. 
+        A little hideaway in some sinkhole somewhere. I’d always thought of it as a secret, imaginary place, and can barely believe that it actually exists. I close my eyes and take a breath, and wonder of it all settles over me like a gentle cloud.”
+    </div>
+</body>
+</html>
