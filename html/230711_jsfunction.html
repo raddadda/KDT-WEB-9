@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    //함수 선언
+
+    //함수 선언문 : 어디서든 호출 가능 
+    function sayHello() {
+        console.log("hello");
+    }
+    
+    sayHello();
+    //함수표현식 : 코드에 도달하면 생성
+    let sayHello2 =function() { //익명함수
+        console.log("hello2");
+    } 
+    sayHello2();
+    //위에서 호출하면 안돼
+    let sayHello3 = () => {
+        console.log("hello3");
+    } 
+    sayHello3();
+    // int[] arr = new arr[n.length];
+    // for(int i=0; i<n.length; i++){
+    //     arr[i] = 
+    // }
+
+    //depth N중에M개고르기
+    // if(depth == M){
+    //     for(int var : num){
+    //         sb.append(var).append(' ');
+    //     }
+    //     sb.append('\n');
+    // }
+
+    // for(int i=0; i<N; i++){
+    //     if(!v){
+    //         v[i]=true;
+    //         num[depth] = arr[i];
+    //         dfs(depth+1);
+    //         v[i]=false;
+    //     }
+    // }
+    let number = 5;
+    //매개변수 x , 반환값 x
+    //함수 내부에서 사용한 변수, 값 등을 함수 외부로 전달하고싶을때
+    function aaa(){
+        console.log("aaa")
+    }
+    //매개변수 x, 반환값이 o
+    function bbb() {
+        return "bbb"
+    }
+    let n1 = 3;
+     //매개변수 o, 반환값이 x
+    function ccc(n1,n2){
+        console.log(n1,n2)
+    }
+    ccc(n1,"javascript")
+    let name = 22;
+    let s = function(name){
+        console.log(`Hello, ${name}`);
+    }
+    s(name);
+     //매개변수 o, 반환값이 o
+    function ddd(n1){
+        return n1;
+    }
+    console.log(ddd(n1));
+
+    let sum = (n1,n2) => {
+        let num4 = n1 + n2;
+        let mul = num4*5;
+        return mul;
+    }
+    let sumMul = sum(3,6);
+    console.log(sumMul);
+    
+    function test(){
+        alert("TEST");
+    }
+
+</script>
+<body>
+    <button onclick = "test()">
+        click
+    </button>
+    <div style="border: 1px solid black; cursor: pointer;"
+    onclick = "test()">
+        안녕?
+    </div>
+
+
+</body>
+</html>
