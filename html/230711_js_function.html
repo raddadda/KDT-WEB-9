@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let fruits = ["apple","banana","orange","grape"]
+    for(let i=0; i<fruits.length; i++){
+        console.log(fruits[i]);
+    }
+    //반복문
+
+    //for문
+    for(let i=0; i<10; i++){
+        for(let j=0; j<10; j++){
+
+        }
+    }
+
+    let number = 5;
+    let sum=0;
+    for(let i=1; i<6; i++){
+        sum+=i;
+    }
+    console.log(sum);
+
+    for(let i=5; i>0; i-=2){
+        console.log(i);
+    }
+
+    for(let i=0; i<10; i++){
+        for(let j=0; j<10; j++){
+            console.log(i,j);
+        }
+    }
+    //while문
+    let index = 0;
+    while(index < fruits.length){
+        console.log(fruits[index]);
+        index++;
+    }
+
+    let num ;
+        while(isNaN(num)){
+        num = Number(prompt("숫자를 입력하세요"));
+        console.log(num)
+        }
+    let number2=5;
+        while(true){
+            number = Number(prompt("10 이상의 숫자를 입력하세요"));
+            if(number >= 10){
+                break;
+            }
+        }
+
+        //do~while
+
+        let i = 10;
+        while(i < 10){
+            // 반복할 코드
+            console.log(i)
+            i++;
+        }
+
+        let j = 10;
+        do {
+            // 반복할 코드
+            console.log(j)
+            j++;
+        }
+        while(j < 10);
+        
+
+        // for(변수선언 of 배열){
+
+        // }
+        //배열의 반복문
+       for(let f of fruits){
+        consoel.log(f);
+       }
+       //배열 forEach
+       
+
+    
+</script>
+<body>
+    
+</body>
+</html>
