@@ -40,6 +40,9 @@
     <button type="button" onclick="createGreenBox()">
         생겨라!
     </button>
+    <button type="button" onclick="removeBox()">
+        사라져라!
+    </button>
     <script>
         // //id 배열 아님
         // let redBoxByID = document.getElementById("red")
@@ -128,10 +131,25 @@
         function createGreenBox() {
             let createBox = document.createElement('div')
             createBox.className = "box green"
-            //append 노드,문자열 다된다.
-            container.append(createBox) //부모요소(컨테이너)에 마지막의 자식요소로 추가한다.
+            //append 매개변수로 노드객체,문자열 다된다.
+            //container.append(createBox) //부모요소(컨테이너)에 마지막의 자식요소로 추가한다.
             //document.write(createBox)
+            //appendChild 매개변수로 노드객체를 받을 수 있다.
+            //container.appendChild(createBox)
             container.append("안녕?")
+            //부모요소에 마지막의 자식요소로 추가한다.
+            container.prepend("안녕?")
+            //orangeBox 뒤에 생성
+            //orangeBox.before(createBox)
+            ////orangeBox 앞에 생성
+            orangeBox.after(createBox)
+        }
+
+        function removeBox(){
+            let orangeBox = document.getElementById("orange")
+            orangeBox.remove()
+
+            // container.removeChild(orangeBox)
         }
         
     </script>

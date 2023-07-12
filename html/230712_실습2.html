@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>방명록입니다</h1>
+    <div>
+        작성자<input type="text" id="writer" />
+    </div>
+    <div>
+        내용<input type="text" id="info" />
+    </div>
+    
+   
+    <button type="button" onclick="create()">
+        작성
+    </button>
+   
+        <table border="1" cellspacing="0">
+            <thead>
+                <th>번호</th>
+                <th>작성자</th>
+                <th>내용</th>
+                <th>작성일</th>
+            </thead>
+           <tbody>
+            </tbody>
+
+        </table>
+    
+
+ 
+    <script>
+        
+        let num=1;
+        function create(){
+            
+            let table = document.querySelector("table")
+            //tr생성
+            let tr = document.createElement("tr")
+            //번호 td
+            let numId = document.createElement("td")
+            numId.innerText =num
+            //작성자 td
+            let writerId = document.createElement("td")
+            let writer = document.getElementById("writer").value
+            writerId.innerText = writer
+            //내용 td
+            let textId = document.createElement("td")
+            let text = document.getElementById("info").value
+            textId.innerText = text
+            //작성일 td
+            let now = new Date()
+            let year =now.getFullYear()
+            let month = now.getMonth()+1
+            let date =now.getDate()
+            let hours = now.getHours();
+            let min = now.getHours();
+            let dateId = document.createElement("td")
+            
+            dateId.innerText = `${year}-${month >= 10 ? month : "0"+month}-${date >=10 ? date : "0"+date}  ${hours} : ${min}`
+            
+            tr.appendChild(numId)
+            tr.appendChild(writerId)
+            tr.appendChild(textId)   
+            tr.appendChild(dateId)        
+            table.appendChild(tr)
+            num++;
+            
+            document.getElementById("writer").value = null
+            document.getElementById("info").value = null
+        }
+
+        function create2(){
+            
+            let table = document.querySelector("table")
+            //tr생성
+            let tr = document.createElement("tr")
+            
+            tr.innerHTML = `
+            <td>${numId}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            `
+            
+            document.getElementById("writer").value = null
+            document.getElementById("info").value = null
+        }
+    </script>
+</body>
+</html>

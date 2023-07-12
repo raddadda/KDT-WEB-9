@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>값1: <input type="text" id="num1"/></div>
+    <div>값2: <input type="text" id="num2"/></div>
+    <div>연산자:<input type="text" id="oper"/></div>
+    <div>결과: <input type="text" id="result"/></div>
+    
+    
+    <button type="button" onclick="calcul()">
+        계산하기
+    </button>
+    <button type="button" onclick="reset()">
+        초기화
+    </button>
+    <script>
+        
+        
+        function calcul(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let oper = document.getElementById("oper").value;
+        let result=0;
+
+        if(oper =="+"){
+            result=num1+num2;
+            console.log(num1);
+            console.log(num2);
+            console.log(oper);
+        }
+        else if(oper =="-"){
+            result=num1-num2;
+        }
+        else if(oper =="*"){
+            result=num1*num2;
+        }
+        else if(oper =="/"){
+            result=num1/num2;
+        }
+        
+            document.getElementById("result").value = result;
+        }
+        function reset(){
+            document.getElementById("num1").value= null;
+            document.getElementById("num2").value= null;
+            document.getElementById("oper").value="";
+            document.getElementById("result").value= null;
+        }
+    </script>
+
+    
+</body>
+</html>
