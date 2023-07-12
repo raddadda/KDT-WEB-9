@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let fruits = ["apple","banana","orange","grape"]
+   
+        
+        //배열의 반복문
+       for(let f of fruits){
+        consoel.log(f);
+       }
+       //원소 인덱스 배열 순서
+       fruits.forEach(function (data,index,arr){
+            console.log(data);
+            console.log(index);
+            console.log(arr); // 모든 배열
+       })
+
+       fruits.forEach((data,index,arr) =>{
+        console.log(data,index,arr);
+       });
+
+       fruits.forEach(function(fruits,i,arr) {
+        console.log(fruits,i,arr);
+       });
+
+
+       
+    
+    
+</script>
+<body>
+    
+</body>
+</html>

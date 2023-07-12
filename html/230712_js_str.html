@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let str = "Happy day~!  ";
+    //문자열 길이
+    console.log(str.length);
+    //대문자,소문자로 출력
+    console.log(str.toUpperCase())
+    console.log(str.toLowerCase())
+    //몇번째 인덱스에 있는지
+    console.log(str.indexOf('d'))
+    //문자열 빼오기
+    console.log(str.slice(2,5))
+    //교체 하나만
+    console.log(str.replace('p','@'))
+    //교체 모두
+    console.log(str.replaceAll('y','c'))
+    //반복
+    console.log(str.repeat(3))
+    //''기준으로 쪼개서 배열에 저장
+    console.log(str.split(''))
+    //양끝 공백 없애기
+    console.log(str.trim())
+
+    let hello = "Hello"
+    helloArr = hello.split("");
+    console.log(helloArr);
+
+    let reverseHello = helloArr.reverse();
+    console.log(reverseHello);
+
+    let helloAgain = reverseHello.join("");
+    console.log(helloAgain);
+    //join() 안에 값을 넣으멶서 합치기
+    console.log(hello.split("").reverse().join("/"));
+</script>
+<body>
+    
+</body>
+</html>

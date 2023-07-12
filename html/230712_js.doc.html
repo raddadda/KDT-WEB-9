@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+    }
+    .red{
+        background-color: red;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .green{
+        background-color: green;
+    }
+</style>
+<body>
+    <div class="container">
+         <div id="red" class="box red">
+        <!-- <span>빨간</span>
+        <span>상자</span> -->
+        </div>
+        <div id="orange" class="box orange"></div>
+        <div id="yellow" class="box yellow"></div>
+    </div>
+   
+    <button type="button" onclick="createGreenBox()">
+        깜빡깜빡
+    </button>
+    <input type="text" name="id" />
+    <button type="button" onclick="createGreenBox()">
+        생겨라!
+    </button>
+    <script>
+        // //id 배열 아님
+        // let redBoxByID = document.getElementById("red")
+        // console.log(redBoxByID)
+
+        // //classname은 배열로 나온다.
+        // let boxes = document.getElementsByClassName("red")
+        // console.log(boxes)
+
+        // //tag name
+        // let boxesByTag = document.getElementsByTagName("div")
+        // console.log(boxesByTag)
+
+        // //name
+        // let input = document.getElementsByName("id")
+        // console.log(input)
+
+        // //선택자 찾는것중 처음꺼 하나
+        // let boxesBySelector = document.querySelector(".box")
+        // console.log(boxesBySelector)
+
+        // //해당 선택자 모두 찾기
+        // let boxesBySelectorAll = document.querySelectorAll(".box")
+        // console.log(boxesBySelectorAll)
+
+        // //아이디
+        // let orangeBySelectorAll = document.querySelectorAll("#orange")
+        // console.log(orangeBySelectorAll)
+
+        // document.write("안녕?");
+        // let redBox = document.getElementById("red")
+        // //redBox.innerText = "aaa"
+        // redBox.innerHTML = "<span>2</span>"
+        // //텍스트만 가져온다
+        // console.log(redBox.innerText)
+        // //안에 태그까지 가져온다
+        // console.log(redBox.innerHTML)
+        // console.log(redBox.textContent)
+
+        // console.log(redBox.className)
+        //classname바꾸기
+        //redBox.className = "box yellow"
+        //배열형태, add
+        //console.log(redBox.classList.add())
+        
+        //토글
+
+        // function redToggle() {
+        //     let redBox = document.getElementById("red")
+        //     redBox.classList.toggle("red")
+
+        //     let divBox = document.getElementsByName("id")
+        //     //배열에는 사용할 수 없다.
+        //     divBox[0].classList.toggle("red")
+
+        //     // //해당값 조회
+        //     // if(redBox.classList.contains("red"))
+        //     // //해당값 삭제
+        //     // redBox.classList.remove("red")
+        //     // else{
+        //     //     //해당값 추가
+        //     //     redBox.classList.add("red")
+        //     // }
+            
+        
+       
+            
+        // }
+        //setAttribute
+        //redBox.setAttribute("class","box orange")
+        
+        let container = document.querySelector(".container")
+        console.log(container)
+        //자식찾기
+        console.log(container.children)
+        let redBox = document.getElementById("red")
+        //부모찾기
+        console.log(redBox.parentElement)
+        //다음요소 하나
+        console.log(redBox.nextElementSibling)
+        let orangeBox = document.getElementById("orange")
+        //전요소 하나
+        console.log(orangeBox.previousElementSibling)
+        //
+
+        function createGreenBox() {
+            let createBox = document.createElement('div')
+            createBox.className = "box green"
+            //append 노드,문자열 다된다.
+            container.append(createBox) //부모요소(컨테이너)에 마지막의 자식요소로 추가한다.
+            //document.write(createBox)
+            container.append("안녕?")
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //현재 로컬시간
+        let now = new Date()
+        //시간 지정
+        let expired = new Date('2023-06-07')
+        console.log(now)
+        console.log(now.getFullYear())//연도
+        console.log(now.getMonth()+1)//달, 0부터 시작함
+        console.log(now.getDate())//일
+        console.log(now.getDay())//요일을 숫자로
+
+        //만료일 판단할때
+        console.log(now.getTime() >= expired.getTime())
+
+        console.log(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`)
+    
+        let year = now.getFullYear()
+        let month =now.getMonth() +1
+        let date = now.getDate()
+
+
+        //math
+        console.log(`${year}-${month >= 10 ? month : "0"+month}-${date >=10 ? date : "0"+date}`)
+        console.log(Math.PI)
+        console.log(Math.min(2,5,8))
+        console.log(Math.random()) //0~1 사이 실수
+        console.log(Math.round(7.9))//반올림
+        console.log(Math.floor(7.9))//내림
+        console.log(Math.ceil(7.9))//올림
+        console.log(Math.floor(Math.random() * (10 - 5) + 5))//정수의 난수
+       
+    </script>
+</body>
+</html>
