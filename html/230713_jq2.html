@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .color1{
+            background-color: red;
+        }
+        .color2{
+            background-color: orange;
+        }
+        .color3{
+            background-color: yellow;
+        }
+        .color4{
+            background-color: green;
+        }
+        .color5{
+            background-color: blue;
+        }
+        .color6{
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box orange"></div>
+    <!-- <button type="button" onclick="switchColor()">바껴라!</button> -->
+    <script>
+
+        let button = document.querySelector("div");
+        let i=0;
+        //선택 요소에 지정한 이벤트가 발생하면 약속된 명령어를 실행시키는 메서드
+        button.addEventListener("mouseup",function(){
+            //function switchColor(){
+           
+           if(i==0){
+               $(".box").switchClass("color1","color2",1000)
+               i++;
+           }
+           else if(i==1){
+               $(".box").switchClass("color2","color3",1000)
+               i++
+           }
+           else if(i==2){
+               $(".box").switchClass("color3","color4",1000)
+               i++;
+           }
+           else if(i==3){
+               $(".box").switchClass("color4","color5",1000)
+               i++;
+           }
+           else if(i==4){
+               $(".box").switchClass("color5","color6",1000)
+               i++;
+           }
+           else if(i==5){
+               $(".box").switchClass("color6","color1",1000)
+               i=0;
+           }
+        
+           
+           //$(".box").css("background-color","blue")
+       //}
+        })
+         
+
+        function s2(){
+            const colors = ["red","orange","yellow","green","blue","purple"]
+            let num=0;
+            $(".box").switchClass(colors[num],colors[num+1])
+            num++;
+
+            if(num === colors.length-1){
+                num=0;
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>

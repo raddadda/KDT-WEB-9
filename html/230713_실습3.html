@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 style="color:green;">2022년 7월</h1>
+
+    
+    <div>
+        날짜<input type="text" id="day"/>
+    </div>
+    <div>
+        내용<input type="text" id="text" />
+    </div>
+    <div>
+        <div>
+        <button type="button" name="">작성</button>
+        </div>
+    </div>
+    <table border="1" cellspacing="0" width="700px " >
+        <thead>
+            <tr>
+                <td style="color: red;">일</td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td style="color: blue;">토</td>
+            </tr>          
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><p>1</p></td>
+                <td style="color: blue;">2</td>
+            </tr> 
+            <tr>
+                <td style="color: red;">3</td>
+                <td><p>4</p></td>
+                <td><p>5</p></td>
+                <td><p>6</p></td>
+                <td><p>7</p></td>
+                <td><p>8</p></td>
+                <td style="color: blue;"><p>9</p></td>
+            </tr> 
+            <tr>
+
+                <td style="color: red;">10</td>
+                <td><p>11</p></td>
+                <td><p>12</p></td>
+                <td><p>13</p></td>
+                <td><p>14</p></td>
+                <td><p>15</p></td>
+                <td style="color: blue;"><p>16</p></td>
+            </tr> 
+            <tr>
+                <td style="color: red;"><p>17</p></td>
+                <td><p>18</p></td>
+                <td><p>19</p></td>
+                <td><p>20</p></td>
+                <td><p>21</p></td>
+                <td><p>22</p></td>
+                <td style="color: blue;"><p>23</p></td>
+            </tr> 
+            <tr>
+                <td style="color: red;"><p>24</p></td>
+                <td><p>25</p></td>
+                <td><p>26</p></td>
+                <td><p>27</p></td>
+                <td><p>28</p></td>
+                <td><p>29</p></td>
+                <td style="color: blue;"><p>30</p></td>
+            </tr> 
+            <tr>
+                <td style="color: red;"><p>31</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="color: blue;"></td>
+            </tr> 
+        </tbody>
+    </table>
+
+
+    <script>
+        
+        let td;
+        $("td").on("click",function(obj){
+            let date = $(this).text()
+            td=this;
+             console.log(this);
+             console.log($(this).text() )
+            $("#day").val(date)
+
+        })
+        // function schedule(){
+        //     let text = 
+
+        // }
+        $("button").on("click",function(){
+             console.log(this);
+             console.log($(this).text() )
+
+            //작성된 내용
+           console.log( $("#text").val());
+           console.log( $(td).append(  $("#text").val()));
+          
+
+        })
+       
+        //console.log(a);
+      
+
+    </script>
+</body>
+</html>
