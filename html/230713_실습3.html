@@ -8,7 +8,24 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <style>
-
+ /* td {
+          width: 200px;
+          height: 100px;
+          color: black;
+          vertical-align: top;
+        }
+        tr > td:first-child > p,
+        tr > th:first-child {
+          color: red;
+        }
+        tr > td:last-child > p,
+        tr > th:last-child {
+          color: blue;
+        }
+        td > p:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        } */
 </style>
 <body>
     <h1 style="color:green;">2022년 7월</h1>
@@ -99,7 +116,7 @@
 
     <script>
         
-        let td;
+        let td=null;
         $("td").on("click",function(obj){
             let date = $(this).text()
             td=this;
@@ -108,23 +125,17 @@
             $("#day").val(date)
 
         })
-        // function schedule(){
-        //     let text = 
-
-        // }
+   
         $("button").on("click",function(){
              console.log(this);
              console.log($(this).text() )
-
+            let content = $("#text").val()
             //작성된 내용
-           console.log( $("#text").val());
-           console.log( $(td).append(  $("#text").val()));
-          
-
+           //console.log( $("#text").val());
+           //console.log( $(td).append(  $("#text").val()));
+           $(td).append(`<div>${content}</div>`)
         })
-       
-        //console.log(a);
-      
+  
 
     </script>
 </body>
