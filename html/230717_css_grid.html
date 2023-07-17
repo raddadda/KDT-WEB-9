@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            /* flex와 다르게 자식요소가 인라인이 되지 않는다. */
+            display: grid;
+            height: 500px;
+            /* 최소,최대 */
+            /* minmax( ,) */
+            /* grid-template-columns: repeat(3,minmax(100px,auto)); */
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: repeat(3,200px); */
+            grid-template-columns: repeat(3,200px);
+            grid-template-rows : repeat(3,200px);
+            /* grid-template-rows: repeat(3,200px); */
+            /* row-gap : 20px;
+            column-gap: 20px; */
+            /* row, culumn */
+            /* gap : 20px; */
+            /* justify-items: center;
+            align-content: center;
+            place-items: center; */
+            /* ~items : item요소가 존재할수 있는 영역 내에서 정렬 */
+            /* place-items: center; */
+            /* content는 부모기준?? */
+            /* 가로? */
+            /* justify-content: center; */
+            /* 세로? */
+            /* align-content: center; */
+            /* ???-content : container 영역 내에서 부모 요소 자체를 정렬  */
+            grid-template-areas :
+            'header header header'
+            'nav main aside'
+            'footer footer footer'
+            
+        }
+        .item {
+            /* width : 100px; 
+            height: 100px; */
+        }
+        .red {
+            
+            background-color: red;
+            /* 1부터 시작해서 4까지 차지한다 */
+            /* grid-column : 1/4 ; */
+            /* 1/span 3 위랑 같음  */
+            /* grid-column: auto / span 3; */
+            /* 위의 그리드컬럼을 적용 후 center적용이 된것 */
+            /* place-self: center; */
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-area: header;
+        }
+        .orange {
+            grid-area: nav;
+            background-color: orange;
+            /* grid-row: auto/span 2; */
+            /* place-self: center; */
+        }
+        .yellow {
+            grid-area: main;
+            background-color: yellow;
+            /* justify-self: center;
+            align-self: center; */
+            /* place-self: center; */
+        }
+        .green{
+            grid-area : aside;
+            background-color: green;
+            /* width: 500px;
+            z-index: 1; */
+        }
+        .blue{
+            grid-area : footer;
+            background-color: blue;
+        }
+        .navy{
+            background-color: navy;
+        }
+        .purple{
+            /* 순서 배치, 작은게 가장 먼저 */
+            /* order: -1; */
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="item red"></div>
+        <div class="item orange"></div>
+        <div class="item yellow"></div>
+        <div class="item green"></div>
+        <div class="item blue"></div>
+        <!-- <div class="item navy"></div>
+        <div class="item purple"></div> -->
+    </div>
+</body>
+</html>

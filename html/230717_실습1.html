@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .body{
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 2fr 2fr 1fr;
+            grid-template-rows : repeat(4,1fr);
+
+            grid-template-areas :
+            'F94144 F94144 F94144 F94144'
+            'F3722C F9C74F F9C74F a43AA8B'
+            'F3722C F8961E a90BE6D a43AA8B'
+            'a4444FF a4444FF a4444FF a4444FF'
+            
+        }
+        .item {
+            /* width : 100px;  */
+            /* height: 2400px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .color1 {
+            background-color: #F94144;
+            grid-area: F94144;
+        }
+        .color2 {
+            background-color: #F3722C;
+            grid-area: F3722C;
+        }
+        .color3 {
+            background-color: #90BE6D;
+            grid-area: a90BE6D;
+        }
+        .color4{
+            background-color: #F8961E;
+            grid-area: F8961E;
+        }
+        .color5{
+            background-color: #43AA8B;
+            grid-area: a43AA8B;
+        }
+        .color6{
+            background-color: #F9C74F;
+            grid-area: F9C74F;
+        }
+        .color7{
+            background-color: #4444FF;
+            grid-area: a4444FF;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="item color1">#F94144</div>
+        <div class="item color2">#F3722C</div>
+        <div class="item color5">#43AA8B</div>
+        <div class="item color4">#F8961E</div>
+        <div class="item color3">#90BE6D</div>
+        <div class="item color6">#F9C74F</div>
+        <div class="item color7">#4444FF</div>
+    </div>
+</body>
+</html>

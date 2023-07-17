@@ -37,24 +37,23 @@
     <button onclick="fn3()">요소 탐색</button>
 
     <script>
-        // function fn3(){
-        //     // console.log($(".container").children().removeClass("red"))
-
-        //     // console.log($(".orange").parent())
-        //     // console.log($(".orange").parents(".container"))
-        //     console.log($(".orange").next())
-        //     console.log($(".orange").prev())
+        function fn3(){
+            console.log($(".container").children().removeClass("red"))
+            console.log($(".orange").parent())
+            console.log($(".orange").parents(".container"))
+            console.log($(".orange").next())
+            console.log($(".orange").prev())
             
 
-        //      console.log($(".red").nextAll())
-        //     console.log($(".red").prevAll(".orange"))
-        // }
+             console.log($(".red").nextAll())
+            console.log($(".red").prevAll(".orange"))
+        }
         //자동으로 모든 태그에 aaaa를 넣는다.
-        // $("input").val("aaaa")
+        $("input").val("aaaa")
        
 
-        // let input = document.querySelectorAll("input")
-        // input.value = "aaaa"
+        let input = document.querySelectorAll("input")
+        input.value = "aaaa"
         
         function submitt(){
            
