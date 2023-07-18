@@ -1,0 +1,7 @@
+*.DS_Store
+#!text.txt
+
+#해당 폴더 무시
+# module/
+#현재 위치기준 폴더 무시
+# /module
