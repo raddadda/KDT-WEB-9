@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AOS - Animate on scroll library</title>
+		<meta name="description" content="AOS - Animate On Scroll library using CSS3">
+		<meta name="keywords" content="AOS, animate on scroll, css3 scroll animations, simple scroll animations">
+		<meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+		<!-- <link rel="stylesheet" href="http://localhost:3002/dist/aos.css" /> -->
+		<link rel="stylesheet" href="dist/css/styles.css" />
+
+
+        <style>
+            body {
+                height: 6000px;
+                margin: 0;
+            }
+            .main_section {
+                position: relative;
+            }
+            .main_section2 {
+                position: relative;
+    
+            }
+            .main_section2 > .main_img2 > video{
+                top: 500px;
+            }
+            .message{
+                position: absolute;
+                top:100px;
+                left:200px;
+                font-size: 100px;
+                font-weight: 100;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                white-space:nowrap;
+            }
+            /* 메인 이미지 */
+            .main_img > div > img{
+                /* align-items: center; */
+                position: absolute;
+                object-fit:cover;
+                width: 100vw;
+                /* animation: movemessage 2s linear infinite alternate; */
+            }
+            
+            .search {
+                position: absolute;
+                top : 50px;
+                right:100px;
+                /* width: 500px; */
+    
+            }
+            /* GENERAL BUTTON STYLING */
+            button,button::after {
+                -webkit-transition: all 0.3s;
+	            -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+	            transition: all 0.3s;
+            }
+
+            button {
+                background: none;
+                border: 3px solid #ffffff;
+                border-radius: 5px;
+                color: #fff;
+                display: block;
+                font-size: 1.3em;
+                font-weight: bold;
+                margin: 1em auto;
+                padding: 2em 6em;
+                position: absolute;
+                text-transform: uppercase;
+                top: 400px;
+                left: 100px;
+            }
+            .button1{
+                position: absolute;
+                top: 550px;
+                left: 100px;
+                font-size: 1.3em;
+               
+           
+            }
+            button::before,
+            button::after {
+                background: #fff;
+                content: '';
+                position: absolute;
+                z-index: -1;
+            }
+
+            button:hover {
+                color: #000000;
+            }
+           /* BUTTON 5 */
+            .btn-5 {
+                overflow: hidden;
+                
+            }
+
+            .btn-5::after {
+                /*background-color: #f00;*/
+                height: 100%;
+                left: -35%;
+                top: 0;
+                transform: skew(50deg);
+                transition-duration: 0.6s;
+                transform-origin: top left;
+                width: 0;
+            }
+
+            .btn-5:hover:after {
+                height: 100%;
+                width: 135%;
+            }
+            input {
+                width: 400px;
+                border : 1px solid #bbb;
+                border-radius: 8px;
+                padding : 10px 12px;
+                font-size: 14px;
+            }
+          
+
+            @media screen and (max-width: 1000px) {
+                .main_img > div > img{
+                    /* position: relative; */
+                    width: 1000px;
+                }
+        }
+          
+            .about{
+                position: relative;
+                top: 100rem;
+            }
+            .about > div > img {
+                width: 500px;
+                top: 100px;
+              
+            }
+            
+            
+            .about > .abouttext {
+                color: #000000;
+                position: absolute;
+                left: 34rem;
+                line-height: 50px;
+                bottom: 10rem;
+            }
+        </style>
+	</head>
+    
+	<body>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /> 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+      
+
+
+        <div class="main_section">  
+
+            
+            <!-- main img -->
+            <div class="main_img">
+                <div class="code code--small code--left" data-aos="fade-right">
+					<img src="../img/c837a6_b7002a8a7bb94d278a813dd452c93cba~mv2.jpg" id=img1 />
+				</div>
+
+                
+            </div>
+            
+           
+          
+            <!-- main title -->
+            <div class="message">
+            <div class="code code--small code--right" data-aos="zoom-in-left">
+                 You Can 
+                    <div class="code code--small code--right" data-aos="zoom-in-left">
+                        <div> & You Will</div>
+                    </div>
+                </div>             
+            </div>
+
+            
+            <!-- login button -->
+            <div class="code code--small code--right" data-aos="flip-left">
+                <button class="btn-5">
+                    <div class="code code--small code--right" data-aos="flip-right">
+                        login
+                    </div>
+                </button>
+            </div>
+
+            <div class="code code--small code--right" data-aos="flip-right">
+                <button class="btn-5 button1" id="button1">
+                    <div class="code code--small code--right" data-aos="flip-left">
+                        about us
+                    </div>
+                </button>
+            </div>
+
+
+            
+        </div>
+        
+
+
+        <div class="search">
+            <input type="text" placeholder="검색어 입력" />
+            <!-- <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" > -->
+            <!-- <button><i class="fa-solid fa-magnifying-glass" ></i></button> -->
+        </div>
+
+        <div class="about">
+                
+            <div class="code code--small code--left" data-aos="flip-right">
+                <!-- <div class="aboutImg1"> -->
+                    <img src="../img/pexels-tembela-bohle-2803158.jpg" id="aboutImg1">
+                <!-- </div> -->
+                <!-- <div class="aboutImg2"><img src="../img/pexels-anush-gorak-1229356.jpg" id="aboutImg2"></div>
+                <div class="aboutImg3"><img src="../img/pexels-tembela-bohle-2803158.jpg" id="aboutImg3"></div> -->
+                
+                
+                
+                <!-- <video src="../img/운동영상1.mp4" poster="대체할 이미지 경로" width="500" height="세로사이즈" loop="" autoplay="" muted=""></video> -->
+            </div>
+
+            <div class="abouttext" id="section1">
+                
+
+                <div>
+
+	
+
+				<div class="code code--small code--left" data-aos="zoom-in">
+					<h1>About Us</h1>
+				</div>
+				<div class="code code--small code--right" data-aos="zoom-in-up">
+					위 코드는 이미지를 HTML img 요소로 삽입하고, CSS를 사용하여 이미지를 반응형으로 만드는 예시입니다. width 속성을 100%로 지
+				</div>
+				<div class="code code--small code--left" data-aos="zoom-in-down">
+					정하여 이미지가 부모 요소에 맞게 늘어나도록 하고, height 속성은 auto로 지정하여 이미
+				</div>
+				<div class="code code--small code--right" data-aos="zoom-in-left">
+					max-width 속성은 이미지의 최대 너비를 지정합니다.
+				</div>
+				<div class="code code--small code--left" data-aos="zoom-in-right">
+					위 코드에서는 미디어 쿼리를 사용하여 화면 너비가 768px 이하인 경
+				</div>
+
+				<div class="code code--small code--right" data-aos="zoom-out">
+					경우 이미지의 최대 너비를 500px로 조정하도록 설정하였습니다. 이
+				</div>
+				<div class="code code--small code--left" data-aos="zoom-out-up">
+					렇게 하면 모바일 화면에서는 이미지가 크게 보이지 않아서 페이지 로딩 속도가 빨라집니다.
+				</div>
+				<div class="code code--small code--right" data-aos="zoom-out-down">
+					반응형 이미지를 구현하는 방법은 위 코드와 같이 간단하게 구현할 수 있습니다. 
+				</div>
+				<div class="code code--small code--left" data-aos="zoom-out-right">
+					하지만 더 복잡한 경우에는 JavaScript나 다른 기술을 사용해야 할 수도 있습니다.
+				</div>
+				<div class="code code--small code--right" data-aos="zoom-out-left">
+					Responsive Image
+				</div>
+		</section>
+                </div>
+            </div>
+        </div>
+       
+
+
+        <script>
+            const button1 = document.getElementById('button1');
+            const section1 = document.getElementById('section1');
+
+            button1.addEventListener('click',() =>{
+                window.scrollBy({top:section1.getBoundingClientRect().top, behavior:"smooth"})
+                console.log(11111);
+            })
+
+        
+        </script>
+       
+      
+
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+
+
+	</body>
+</html>
