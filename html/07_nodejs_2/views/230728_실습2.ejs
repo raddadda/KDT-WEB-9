@@ -6,14 +6,22 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/0728_실습2.css"/>
+    <link rel="stylesheet" href="../public/css/0728_실습2.css"/>
 </head>
 <body>
     <div></div>
-    <button type="button" onclick="changeFruits('apple')">사과</button>
-    <button type="button" onclick="changeFruits('banana')">바나나</button>
-    <button type="button" onclick="changeFruits('grape')">포도</button>
-    <button type="button" onclick="changeFruits('peach')">복숭아</button>
+    <!-- <%for(let i=0; i < fruit.length; i++){%>
+        <button type="button" onclick="changeFruits('<%= fruit[i] %>')">
+             <%= fruit[i].kor %> 
+        </button>
+    <% }%>
+     -->
+
+   
+    <button type="button" onclick="changeFruits('apple')"> 사과 </button>
+    <button type="button" onclick="changeFruits('banana')"> 바나나 </button>
+    <button type="button" onclick="changeFruits('grape')"> 포도 </button>
+    <button type="button" onclick="changeFruits('peach')"> 복숭아 </button>
 
     <script>
         function changeFruits(fruit) {

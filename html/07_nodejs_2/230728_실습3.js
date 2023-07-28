@@ -8,20 +8,14 @@ app.set('views','./views');
 app.use('/public', express.static('./public'));
 
 app.get('/',(req,res)=>{
-    res.render('230728_실습2',
-    {fruit: [
-        {name:'apple',kor:'사과'},
-        {name:'banana',kor:'바나나'},
-       {name:'grape',kor:'포도'},
-        {name:'peache',kor:'복숭아'}]});
+    res.render('230728_실습3'
+    ,{data:[2,3,4,5,6,7,8,9] }
+    );
 });
 
 app.listen(PORT , () => {
     console.log(`http://localhost:${PORT}`);
 });
-
-
-
 
 
 
