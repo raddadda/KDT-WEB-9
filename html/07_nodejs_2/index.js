@@ -32,6 +32,12 @@ app.get('/kdt072801',(req,res) => {
     // res.send("Hello kdt9");
     
 });
+app.get('/kdt072802',(req,res) => {
+    //뷰 엔진 렌더링 send와 다르게 읽으면서 데이터도 보낼 수 있다.
+    res.render('230728_실습2');
+    // res.send("Hello kdt9");
+    
+});
 //서버 열기 (port번호)
 app.listen(PORT , () => {
     console.log(`http://localhost:${PORT}`);
