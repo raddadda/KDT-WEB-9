@@ -10,19 +10,12 @@
 </head>
 <body>
     <div></div>
-    <!-- <%for(let i=0; i < fruit.length; i++){%>
+    <%for(let i=0; i < fruit.length; i++){%>
         <button type="button" onclick="changeFruits('<%= fruit[i] %>')">
              <%= fruit[i].kor %> 
         </button>
     <% }%>
-     -->
-
-   
-    <button type="button" onclick="changeFruits('apple')"> 사과 </button>
-    <button type="button" onclick="changeFruits('banana')"> 바나나 </button>
-    <button type="button" onclick="changeFruits('grape')"> 포도 </button>
-    <button type="button" onclick="changeFruits('peach')"> 복숭아 </button>
-
+    
     <script>
         function changeFruits(fruit) {
             $("div").removeClass().addClass(fruit)

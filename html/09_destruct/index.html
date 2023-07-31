@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열 구조 분해
+        const lists = ['apple','grape'];
+        //기존 방식
+        console.log(lists[0],lists[1]);
+        //구조 분해
+        [apple, item2] = lists;
+        console.log("item1: ", apple, "item2: ", item2);
+        //교환할때는 let
+        let x = 1, 
+        y = 3;
+        [x,y]= [y,x]
+        console.log(x,y);
+        console.log(x);
+
+        //객체
+        const Person = {
+            name: 'chan',
+            age: 25,
+            gender: 'M',
+            city: 'busan',
+            friends: ['alex','kevin'],
+            hello: function() {
+              console.log('hello');  
+            },
+            //특수문자 안됨 그럴땐 문자열로
+            "kdt-9" : "9기"
+        };
+        //객체 접근
+        console.log(Person.name);
+        console.log(Person.friends[0]);
+        Person.hello();
+        console.log(Person['name']);
+        console.log(Person['kdt-9']);
+        Person.city='seoul';
+        //객체 구조 분해
+        // 바꿀 키값 : 변경할 키값
+        const {name,city,gender,key='Hi',age:myAge} = Person;
+        console.log(name,city,gender,key,myAge);
+    </script>
+</body>
+</html>
