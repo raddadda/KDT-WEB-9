@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <h4>GET요청</h4>
+    <form action="/getForm" method="GET">
+        <input type="text" placeholder="id" name="id" required>
+   
+        <input type="password" placeholder="pw" name="pw">
+
+        <button type="submit">제출</button>
+    </form>
+    <hr />
+    <h4>POST요청</h4>
+    <form action="/postForm" method="POST">
+        <input type="text" placeholder="id" name="id">
+        <!-- 정규식 {8,12}: 8,12 숫자 사이-->
+        <input type="password" placeholder="pw" name="pw" pattern="^([a-z0-9]){8,12}">
+        <input type="email"><br />
+        <input type="radio"><br />
+        <input type="checkbox"><br />
+        <input type="tel"><br />
+        <!-- 모바일에서 클릭하면 번호창이 뜨게됨 -->
+        <input type="number"><br />
+        <input type="date"><br />
+        <input type="time"><br />
+        <input type="color"><br />
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>
