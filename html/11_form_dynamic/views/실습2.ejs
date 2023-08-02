@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h4>get으로 정보받기<h4>
+        <script>
+            
+        </script>
+        <form name="register">
+            아이디 <input type="text" name="id" id="id">
+            <br />
+            패스워드 <input type="password" name="password" id="password">
+            <br />
+            <button type="button" onclick="axiosPost()">로그인</button>
+        </form>
+        <div class="result"></div>
+        <script>
+            const resultBox = document.querySelector('.result');
+  
+            function axiosPost() {
+                console.log('axios get');
+                const form = document.forms['register'];
+                console.log(form.password);
+                const data = {
+                    id: form.id.value,
+                    password: form.password.value
+                };
+
+                axios({
+                    method: 'POST',
+                    url: 'axios',
+                    data,
+                }).then((res) => {
+                    console.log('res', res);
+                    console.log('res', res.data);
+                    if(res.data== true){
+                        resultBox.textContent = `로그인에 성공하셨습니다.`;
+                        resultBox.style.color = 'blue';
+                    }else{
+                        resultBox.textContent = `로그인에 실패하셨습니다.`;
+                        resultBox.style.color = 'red';
+                    }
+                });
+                
+            }
+        </script>
+
+        
+</body>
+</html>
