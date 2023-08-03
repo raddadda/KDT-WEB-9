@@ -19,10 +19,10 @@ app.get('/axios', (req,res)=> {
     console.log('back',req.query);
     res.send(req.query);
 })
-app.post('/axios', (req,res)=> {
-    console.log('back',req.body);
-    res.send(req.body);
-})
+// app.post('/axios', (req,res)=> {
+//     console.log('back',req.body);
+//     res.send(req.body);
+// })
 
 //server start
 app.listen(PORT, () => {
