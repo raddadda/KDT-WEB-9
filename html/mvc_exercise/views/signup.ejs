@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <form name="signup-form">
+        <fieldset>
+            <legend>회원가입</legend>
+            <input type="text" id="userid" placeholder="아이디를 입역해주세요."><br />
+            <input type="text" id="name" placeholder="이름을 입력해주세요."><br />
+            <input type="password" id="pw" placeholder="비밀번호를 입력해주세요."><br />
+            <button type="button" onclick="register()">회원가입</button>
+        </fieldset>
+    </form>
+
+    <div class="result"></div>
+
+    <script>
+        const resultBox = document.querySelector('.result');
+
+        function register() {
+            console.log('register post');
+            const form = document.forms['signup-form'];
+            const data = {
+                userid: form.userid.value,
+                name : form.name.value,
+                pw: form.pw.value
+            };
+
+            axios({
+                method: 'POST',
+                url: '/user/signup',
+                data,
+            }).then((res) => {
+                console.log('res', res);
+                if(res.data.result){
+                    alert("회원가입을 축하합니다");
+                    window.location.href = 'user/signin';
+                }
+            });
+            
+        }
+    </script>
+    
+</body>
+</html>
