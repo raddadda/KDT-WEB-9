@@ -42,7 +42,8 @@
                 }).then((res) => {
                     console.log('res', res);
                     console.log('res', res.data);
-                    if(res.data== true){
+                    const {result,userInfo} = res.data;
+                    if(result){
                         resultBox.textContent = `로그인에 성공하셨습니다.`;
                         resultBox.style.color = 'blue';
                     }else{

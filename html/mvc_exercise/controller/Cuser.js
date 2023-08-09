@@ -1,4 +1,5 @@
-const Visitor = require('../model/User');
+const User = require('../model/User');
+
 exports.index = (req,res)=>{
     res.render('index');
 }
@@ -7,16 +8,13 @@ exports.getSignup = (req,res)=>{
 }
 exports.postSignup = (req,res)=>{
     User.postSignup(req.body, () =>{
-        res.rend({result:true});
+        res.send({result:true});
     });
 }
-
 exports.getSignin = (req,res) =>{
     res.render('signin');
 };
-
 exports.postSignin = (req,res) =>{
-    //model
     User.postSignin(req.body, (result)=>{
         if(result.length>0){
             res.send({result:true , data: result[0]});
@@ -25,3 +23,31 @@ exports.postSignin = (req,res) =>{
         }
     });
 };
+
+exports.postProfile = (req,res) => {
+    console.log("req.body",req.body.huserid);
+    User.postProfile(req.body, (result)=>{
+        console.log("성공");
+        console.log(result);
+        res.render('profile',{data:result});
+
+    });
+}
+
+exports.postProfile_modify = (req,res) =>{
+    console.log("req.body m",req.body);
+    User.postProfile_modify(req.body, (result)=>{
+        console.log("postProfile_modify Cuser 성공");
+        console.log(result);
+        res.send(result);
+    })
+}
+
+exports.postProfile_delete = (req,res) =>{
+    console.log("req.body d",req.body);
+    User.postProfile_delete(req.body, (result)=>{
+        console.log("postProfile_delete Cuser 성공");
+        console.log(result);
+        res.send(result);
+    })
+}

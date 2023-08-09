@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const PORT = 8000;
-const controller = require('./controller/CComment');
 
 app.set('view engine','ejs');
 app.set('views','./views');
@@ -9,7 +8,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 //index를 안쓰면 routes는 기본적으로 index를 찾는다.
-const router = require('./routes/index')
+const router = require('./routes/index.js')
 app.use('/',router);
 
 //ex

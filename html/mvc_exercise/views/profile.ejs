@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>profile</h1>
+    <form name="profile-form">
+        <fieldset>
+            <legend>회원가입</legend>
+            <!-- <input type="hidden" id="id" value="<%= data[0].id %>"> -->
+            <input type="text" id="userid" value="<%= data[0].userid %>" ><br />
+            <input type="text" id="name" value="<%= data[0].name %>" ><br />
+            <input type="password" id="pw" value="<%= data[0].pw %>" ><br />
+            <button type="button" onclick="profileModify()">수정</button>
+            <button type="button" onclick="profileDelete()">삭제</button>
+            
+        </fieldset>
+    </form>
+
+    <script>
+        let cnt=0;
+
+        function profileModify(){
+            
+            // $("#name").attr("disabled", false);
+            // $("#pw").attr("disabled", false);
+
+                const form = document.forms['profile-form'];
+
+                axios({
+                    method:'POST',
+                    url:'/user/profile/modify',
+                    data: {
+                        // id: form.id.value,
+                        userid: form.userid.value,
+                        name: form.name.value,
+                        pw: form.pw.value
+                    },
+                }).then((res) =>{
+
+                    console.log(res);
+                    
+                    if(res.data.result){
+                        document.getElementById("userid").value = res.data.userid;
+                        document.getElementById("name").value = res.data.name;
+                        document.getElementById("pw").value = res.data.pw;
+                        alert("성공");
+                        console.log("성공")
+                        window.location.reload();
+                    }else{
+                        alert("실패");
+                        console.log("실패");
+                    }
+                });
+            }
+        
+
+            function profileDelete(){
+                if(!confirm('삭제하시겠습니까?')){
+                    return;
+                }
+      
+                const form = document.forms['profile-form'];
+
+                axios({
+                    method:'POST',
+                    url:'/user/profile/delete',
+                    data: {
+                        userid: form.userid.value,
+
+                    },
+                }).then((res) =>{
+
+                    console.log(res);
+                    
+                    if(res.data.result){
+                        alert("성공");
+                        console.log("성공");
+                          window.location.href = '/user/signin';
+                    }else{
+                        alert("실패");
+                        console.log("실패");
+                    }
+                });
+            }
+         
+
+
+
+    </script>
+</body>
+</html>

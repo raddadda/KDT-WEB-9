@@ -10,13 +10,11 @@ exports.getVisitors= (req,res)=>{
     Visitor.getVisitors((result)=>{
         res.render('visitor',{data:result});
     });
-    
 };
 exports.getVisitor = (req,res)=> {
     Visitor.getVisitor(req.query.id, (result) => {
         res.render('visitor',{data:result});
     });
-   
 };
 exports.postVisitor = (req,res)=>{
     //문자열일때는 '' 추가
@@ -32,5 +30,5 @@ exports.patchVisitor = (req,res)=>{
 exports.deleteVisitor = (req,res)=>{
     Visitor.deleteVisitor(req.body, () =>{
         res.send({result:true});
-    })
+    });
 };

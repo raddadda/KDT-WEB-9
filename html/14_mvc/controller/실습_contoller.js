@@ -1,12 +1,13 @@
     const Comment = require('../model/실습_model');
 
-    //로그인 여부 true 성공 / false 실패
-    let t = true;
+   
 
     exports.main = (req,res) =>{
         res.render('실습2');
     }
-
+    exports.axiosPost= (req,res) => {
+        res.render('실습2');
+    }
     exports.comment = (req,res)=> {
   
 

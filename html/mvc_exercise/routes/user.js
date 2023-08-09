@@ -12,4 +12,10 @@ router.get('/signin',controller.getSignin);
 
 router.post('/signin',controller.postSignin);
 
+router.post('/profile',controller.postProfile)
+
+router.post('/profile/modify',controller.postProfile_modify)
+
+router.post('/profile/delete',controller.postProfile_delete)
+
 module.exports=router;

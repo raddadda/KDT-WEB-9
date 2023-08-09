@@ -12,7 +12,7 @@
         <% for(let i=0; i < commentInfos.length; i++){ %>
             <li>
                 <b><%= commentInfos[i].userId %></b>
-                <a href="/comment/<%= i+1 %>"><%= commentInfos[i].comment %></a>
+                <a href="/comments/<%= i+1 %>"><%= commentInfos[i].comment %></a>
             </li>
         <% } %>
     </ul>

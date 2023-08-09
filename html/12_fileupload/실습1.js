@@ -22,7 +22,6 @@ const uploadDetail= multer({
             const ext = path.extname(file.originalname);
             console.log('ext',ext);
             done(null, req.body.id + Date.now() + ext);
-
         },
     }),
     limits : {fileSize : 10 * 1024 * 1024},
