@@ -4,7 +4,6 @@ const models = require('../models')
 exports.main=(req,res)=> {
     res.render('index');
 };
-
 //전체 방명록 조회
 exports.getVisitors= (req,res)=>{
     // console.log(Visitor.getVisitors());
@@ -14,8 +13,10 @@ exports.getVisitors= (req,res)=>{
     // });
 
     //select * from visitor
-    models.Visitor.findAll().then(result => {
+    models.Visitor.findAll().then((result) => {
+        console.log('findAll',result);
         res.render('visitor',{data:result});
+        // res.send({data:result, mag: 'hi',kdt:9});
     });
 
 };

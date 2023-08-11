@@ -1,5 +1,11 @@
 *.DS_Store
 /html/mvc_mysql/node_modules
+/html/15_sequelize/node_modules
+/html/14_mvc_mysql_practice/node_modules
+/html/backend_project/node_modules
+/html/mvc_exercise2/node_modules
+/html/mvc_exercise1/node_modules
+/html/17_cookie/node_modules
 #!text.txt
 
 #해당 폴더 무시

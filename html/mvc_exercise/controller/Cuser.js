@@ -1,4 +1,5 @@
-const User = require('../model/User');
+ const User = require('../model/User');
+//const models = require('../models')
 
 exports.index = (req,res)=>{
     res.render('index');
@@ -6,10 +7,12 @@ exports.index = (req,res)=>{
 exports.getSignup = (req,res)=>{
     res.render('signup');
 }
+
 exports.postSignup = (req,res)=>{
     User.postSignup(req.body, () =>{
         res.send({result:true});
     });
+
 }
 exports.getSignin = (req,res) =>{
     res.render('signin');

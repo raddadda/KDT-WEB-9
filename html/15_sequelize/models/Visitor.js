@@ -21,11 +21,15 @@ const Visitor = function(sequelize, DataTypes) {
             },
 
             
-        },{
-            tableName : 'visitor',
-            freezeTableName: true,
-            timestamps: false,
-        });
+        },
+        // {
+        //     tableName : 'visitor',
+        //     //이름 복수형 만들어주는것
+        //     freezeTableName: true,
+
+        //     timestamps: false,
+        // }
+        );
         return model;
 };
 
