@@ -3,6 +3,9 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const PORT = 8000;
 
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
 app.set('view engine','ejs');
 
 //일반 쿠키
@@ -18,18 +21,41 @@ const cookieConfig = {
 };
 
 app.get('/', (req,res)=>{
-    res.cookie('myCookie','myValue',cookieConfig);
-    res.render('실습');
+   
+    if(req.cookies.myCookie != null){
+        result = true;
+        console.log("cookie!!");
+        res.render('실습',{b:true});
+    }else{
+        res.render('실습',{b:false});
+    }
+   
 });
+// app.get('/axios', (req,res)=> {
+//     console.log('back',req.query);
+//     res.send(req.query);
+// })
+// app.post('/axios', (req,res)=> {
+//     console.log('back',req.body);
+//     res.send(req.body); 
+// })
+app.post('/cookie', (req,res)=>{
+    let a = req.body.cookie;
+    console.log('back',req.body.cookie);
+  
+    let result;
 
-app.post('/', (req,res)=>{
-    res.send(req.signedCookies.myCookie);
-    console.log(req.signedCookies.myCookie);
-    // if(result=){
-     
-    // }else{
-        
-    // }
-    // res.clearCookie('myCookie','myValue',cookieConfig)
+    if(req.body.cookie){
+        res.cookie('myCookie','myValue',cookieConfig);
+        result = true;
+    }
+
+    console.log("cookie",req.cookies.myCookie);
+  
+   // res.clearCookie('myCookie','myValue',cookieConfig)
+   
+    res.send(result);
 })
+
+
 app.listen(PORT);

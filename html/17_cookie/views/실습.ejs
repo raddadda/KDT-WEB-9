@@ -8,11 +8,17 @@
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
   crossorigin="anonymous"></script>
+  <!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .modal{
+   <style>
+        /* .modal{
             position: absolute;
             top: 100px;
             left:100px;
@@ -21,45 +27,109 @@
             display:inline;
 
             background-color: rgb(166, 255, 0);
-        }
+        } */
+      
     </style>
 </head>
 <body>
-   
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal</h5>
+            </div>
+            <div class="modal-body">
+              <p>인터넷익스프로러 지원 종료 안내</p>
+            </div>
+            <div class="modal-footer">
+                <form name="cookie-form">
+                    <input type="hidden" id="cookie_modal" value="<%= b %>" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearcookie()">Close</button>
+                    <label for="cookie">오늘 그만 보기 </label>
+                    <input type="checkbox" id="cookie" name="cookie" value="cookie"/> 
+                    <!-- <button type="checkbox" id="cookie" name="cookie" value="cookie" >오늘 그만 보기</button> -->
+                </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
-
-     <div class="modal">
+     <!-- <div class="modal" >
         <form name="cookie-form">
             <div class="modal_body">Modal</div>
-            <input type="checkbox" id="cookie" name="cookie" value=""/> 오늘 그만 보기
-            <button type="button" onclick="clearcookie()" id="cookieclear">X</button>
-        </form>
-    </div>
-
-    <script>
-        function clearcookie() {
-            console.log($('#cookie').val());
-            if($('#cookie').val() == "on"){
-                 const form = document.forms['cookie-form'];
-
-            const data = {
-               result : true
-            }
+            <input type="hidden" id="cookie_modal" value="<%= b %>" />
+            <input type="checkbox" id="cookie" name="cookie" value="cookie"/> 오늘 그만 보기  
             
-            axios({
-                method:'POST',
-                url: '/',
-                data,
-            }).then((res)=>{
-                console.log('res',res);
-                if(res.data.result){
-                    alert(`성공`);
-                }else{
-                    alert('실패');
-                }
-            })
-            }
+            <button type="button" onclick="clearcookie()" id="cookieclear">X</button>
+        
+        
+    </div> -->
+   
+    <script>
+       
+
+       console.log($('#cookie_modal').val());
+
+    if($('#cookie_modal').val()=='true'){
+        console.log($('#cookie_modal').val());
+        $('.modal').css('display','none');
+    }else{
+        console.log($('#cookie_modal').val());
+        $('.modal').css('display','inline');
+    }
+    // if($.cookie('myCookie') != undefined){
+    //   $("#modal").modal('hide');
+    // }
+    
+    // axios({
+    //                 method: 'GET',
+    //                 url: '/',
+    //                 data
+    //             }).then((res) => {
+    //                 console.log("post res",res);
            
+    //                 if(res){
+    //                     $('.modal').css('display','none');
+    //                    // let check = res;
+    //                 }
+                   
+    //                 // resultBox.textContent = `GET /axios 요청 완료! ${res.data.name}님은 ${res.data.gender}입니다`;
+    //                 // resultBox.style.color = 'green';
+    // });
+        function clearcookie() {
+              
+                const form = document.forms['cookie-form'];
+                console.log('form',document.forms['cookie-form']);
+                
+                if($('input:checkbox[name="cookie"]').is(":checked") ==  true){
+                    console.log('checked');
+                    chk = true;
+                }
+                console.log(chk);
+                const data = {
+                    id : form.id.value,
+                    cookie: chk
+                };
+                console.log(data);
+                console.log(data.cookie);
+
+                axios({
+                    method: 'POST',
+                    url: 'cookie',
+                    data
+                }).then((res) => {
+                    console.log("post res",res);
+           
+                    if(res){
+                        $('.modal').css('display','none');
+                       // let check = res;
+                    }
+                   
+                    // resultBox.textContent = `GET /axios 요청 완료! ${res.data.name}님은 ${res.data.gender}입니다`;
+                    // resultBox.style.color = 'green';
+                });
         }
     </script>
 </body>
