@@ -10,7 +10,8 @@ sequelize = new Sequelize(config.database, config.username, config.password, con
 
 
 //model
-db.Visitor= require('./Visitor')(sequelize,Sequelize)
+db.Visitor= require('./Visitor')(sequelize,Sequelize);
+
 //축약
 // const a =require('./Visitor')
 // const b = a(sequelize,Sequelize)

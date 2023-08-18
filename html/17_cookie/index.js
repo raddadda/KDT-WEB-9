@@ -31,17 +31,10 @@ app.get('/', (req,res)=>{
     }
    
 });
-// app.get('/axios', (req,res)=> {
-//     console.log('back',req.query);
-//     res.send(req.query);
-// })
-// app.post('/axios', (req,res)=> {
-//     console.log('back',req.body);
-//     res.send(req.body); 
-// })
+
 app.post('/cookie', (req,res)=>{
-    let a = req.body.cookie;
-    console.log('back',req.body.cookie);
+    // let a = req.body.cookie;
+     console.log('back',req.body.cookie);
   
     let result;
 
@@ -52,8 +45,6 @@ app.post('/cookie', (req,res)=>{
 
     console.log("cookie",req.cookies.myCookie);
   
-   // res.clearCookie('myCookie','myValue',cookieConfig)
-   
     res.send(result);
 })
 

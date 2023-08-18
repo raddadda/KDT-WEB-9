@@ -47,26 +47,12 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearcookie()">Close</button>
                     <label for="cookie">오늘 그만 보기 </label>
                     <input type="checkbox" id="cookie" name="cookie" value="cookie"/> 
-                    <!-- <button type="checkbox" id="cookie" name="cookie" value="cookie" >오늘 그만 보기</button> -->
                 </form>
-              
             </div>
           </div>
         </div>
       </div>
-    
-
-     <!-- <div class="modal" >
-        <form name="cookie-form">
-            <div class="modal_body">Modal</div>
-            <input type="hidden" id="cookie_modal" value="<%= b %>" />
-            <input type="checkbox" id="cookie" name="cookie" value="cookie"/> 오늘 그만 보기  
-            
-            <button type="button" onclick="clearcookie()" id="cookieclear">X</button>
-        
-        
-    </div> -->
-   
+  
     <script>
        
 
@@ -79,25 +65,7 @@
         console.log($('#cookie_modal').val());
         $('.modal').css('display','inline');
     }
-    // if($.cookie('myCookie') != undefined){
-    //   $("#modal").modal('hide');
-    // }
-    
-    // axios({
-    //                 method: 'GET',
-    //                 url: '/',
-    //                 data
-    //             }).then((res) => {
-    //                 console.log("post res",res);
-           
-    //                 if(res){
-    //                     $('.modal').css('display','none');
-    //                    // let check = res;
-    //                 }
-                   
-    //                 // resultBox.textContent = `GET /axios 요청 완료! ${res.data.name}님은 ${res.data.gender}입니다`;
-    //                 // resultBox.style.color = 'green';
-    // });
+
         function clearcookie() {
               
                 const form = document.forms['cookie-form'];
@@ -124,11 +92,7 @@
            
                     if(res){
                         $('.modal').css('display','none');
-                       // let check = res;
                     }
-                   
-                    // resultBox.textContent = `GET /axios 요청 완료! ${res.data.name}님은 ${res.data.gender}입니다`;
-                    // resultBox.style.color = 'green';
                 });
         }
     </script>

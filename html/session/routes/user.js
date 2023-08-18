@@ -5,7 +5,6 @@ import * as controller from '../controller/Cuser.js';
 const router = express.Router();
 
 router.get('/', controller.index);
-router.post('/', controller.indexpost);
 router.get('/loginmain', controller.index_login);
 //GET localhost:8000/user/signup
 router.get('/signup', controller.signup);

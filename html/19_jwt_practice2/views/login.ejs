@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <body>
+        <h1>로그인</h1>
+        <form name="form-login">
+            <input type="text" id="userid" name="userid"/></br>
+            <input type="text" id="pw" name="pw"/></br>
+            <button type="button" onclick="login()">로그인</button>
+        </form>
+
+        <script>
+           
+           const form = document.forms['form-login'];
+
+           function login(){
+             console.log("document.forms",document.forms);
+             console.log(form);
+
+             axios({
+                method:"post",
+                url:"/login",
+                data: {
+                    id : form.userid.value,
+                    pw : form.pw.value
+                }
+             }).then((res)=>{
+                console.log(res.data.token);
+                localStorage.setItem('login',res.data.token);
+                document.location.href='/';
+             })
+           }
+        </script>
+    </body>
+</html>
