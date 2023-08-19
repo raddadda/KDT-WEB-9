@@ -5,8 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <body>
         <div>실습</div>
-        
+        <form name="register">
+            <input type="text" id="userid" placeholder="ID" /><br />
+            <input type="password" id="pw" placeholder="PW" /><br />
+            <input type="text" id="name" placeholder="NAME" /><br />
+            <button type="button" onclick="registerFunc()">회원가입</button>
+        </form>
+
+        <script>
+            
+            async function registerFunc(){
+                const data = {
+                    userid : document.querySelector('#userid').value,
+                    pw : document.querySelector('#pw').value,
+                    name : document.querySelector('#name').value,
+                };
+                const result = await axios({
+                    method : 'POST',
+                    url : '/register',
+                    data,
+                })
+                console.log("axios result : ",result);
+                if(result.data.result){
+                    document.location.href = '/login';
+                }
+            }
+        </script>
     </body>
 </html>

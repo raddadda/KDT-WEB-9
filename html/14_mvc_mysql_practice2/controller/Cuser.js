@@ -27,22 +27,7 @@ export const signin = (req, res) => {
 //     decrypredData += decipher.final('utf-8');
 //     return decrypredData;
 // }
-import crypto from 'crypto';
-const algorithm = 'aes-256-cbc'
-const key = crypto.randomBytes(32);
-const iv = crypto.randomBytes(16);
-const cipherEncrypt = (word) => {
-    const cipher = crypto.createCipheriv(algorithm,key,iv); //암호화 객체 생성
-    let encryptedData = cipher.update(word,'utf-8','base64'); //암호화할 데이터 처리 utf-8 -> base64
-    encryptedData += cipher.final('base64');
-    return encryptedData;
-}
-const decipher = (encryptedData) => {
-    const decipher = crypto.createDecipheriv(algorithm,key,iv) // 복호화 객체 생성
-    let decrypredData = decipher.update(encryptedData,'base64','utf-8'); // base64 -> utf-8
-    decrypredData += decipher.final('utf-8');
-    return decrypredData;
-}
+
 export const post_signup = async (req, res) => {
     try {
         await User.post_signup(req.body);
@@ -50,10 +35,8 @@ export const post_signup = async (req, res) => {
         console.log("req.body",req.body.pw);
         
        
-        console.log("cipherEncrypt", cipherEncrypt(req.body.pw));
-        const encode = cipherEncrypt(req.body.pw);
-        console.log("decipher", decipher(encode));
-        res.send({ result: true , cipher: cipherEncrypt(req.body.pw)});
+
+        res.send({ result: true });
     } catch (error) {
         console.log(error);
     }

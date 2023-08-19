@@ -56,12 +56,12 @@ export const post_signin = async (data) => {
         //console.log("login_data.pw2:",decode);s
         // data.pw=decode;
         // console.log("login_data.pw2:",data.pw);
-        const query2 = `SELECT * FROM user1 WHERE userid = ${data.userid}`;
+        const query2 = `SELECT * FROM user1 WHERE pw = ${data.pw}`;
         
         const [rows2] = await conn.query(query2, [data.userid]);
         console.log("q2",rows2);
         console.log("q2pw",rows2[0].pw);
-        //console.log("!!!!", decipher('BlEhF7bj7AfGqR7mXM0TGA=='));
+        console.log("!!!!", decipher('BlEhF7bj7AfGqR7mXM0TGA=='));
        
         
         //if(data.pw === decipher(rows2[0].pw)){
