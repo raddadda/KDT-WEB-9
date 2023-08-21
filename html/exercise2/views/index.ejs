@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1> JWT 실습</h1>
+    <div id="btt"></div>
+
+    <script>
+
+            check();
+
+            function check(){
+                const chk = document.querySelector('.token_check');
+                const token = localStorage.getItem('login_token');
+                const btt = document.querySelector('#btt');
+                let data= '';
+                console.log('check');
+                console.log('token',token);
+                if(!token){
+                    console.log('token');
+                    data=`
+                    <a href="/login">로그인</a>
+                    `;
+                }
+                axios({
+                    method : "get",
+                    url : '/token',
+                    headers: {
+                            Authorization: `Bearer ${token}`,
+                    },
+                }).then((res)=>{
+                    console.log("chk res:",res.data.token);
+                    if(localStorage.getItem('login_token')){
+                        console.log("토큰있음");
+                        
+                        data=`
+                        <button type='button' onclick='logout()'>로그아웃</button>
+                        `;
+                        btt.innerHTML = data;
+                    }else{
+                        console.log("토큰없음");
+                    }
+                })
+                //console.log("data",data);
+               btt.innerHTML = data;
+              
+            }
+
+            function logout(){
+                localStorage.clear();
+                alert('로그아웃');
+                document.location.href='/';
+            }
+    </script>
+</body>
+</html>
