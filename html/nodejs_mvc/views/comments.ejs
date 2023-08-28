@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원전체 목록</h1>
+    <a href="/">홈으로 이동</a>
+
+    <form name="member-form">
+        이름<input type="text" id="userid"> <br/>
+        <label for="male">남자</label>
+        <input type="radio" name="gender" value="M" id="male">
+        <label for="female">여자</label>
+        <input type="radio" name="gender" value="W" id="female">
+       <br/>
+        전공<input type="text" id="major">
+
+        <button type="button" onclick="member()">추가</button>
+    </form>
+
+
+    <ul>
+        <% for(let i = 0; i< lists.length; i++) { %>
+            <li>
+                <b><%= lists[i].userid %></b>
+                <a href="/comment/<%= lists[i].id %>"><%= lists[i].major %></a>
+            </li>
+        <% }%>
+    </ul>
+
+    <script>
+        function member(){
+            lists.add(a);
+
+            lists.forEach(element => {
+                console.log(element)
+            });
+        }
+     </script>
+</body>
+</html> -->

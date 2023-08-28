@@ -23,5 +23,4 @@ const UserModel = (sequelize) => {
     });
     return User;
 };
-
 module.exports = UserModel;

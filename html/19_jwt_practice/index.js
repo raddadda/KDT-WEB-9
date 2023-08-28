@@ -35,7 +35,6 @@ app.get('/token', (req, res) => {
     }
 });
 app.post('/login', (req, res) => {
-    
     try{
         const {id,pw} = req.body;
         //구조물 할당
