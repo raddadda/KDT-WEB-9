@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>Socket IO</div>
+    <ul>
+
+    </ul>
+    <form id="chat">
+        <input type="text" id="user" />
+        <input type="text" id="message">
+        <button type="submit">채팅</button>
+    </form>
+
+    <button type="button" id="A" value="안녕하세요~">hello</button>
+    <button type="button" id="B" value="공부합시다~">study</button>
+    <button type="button" id="C" value="잘가~">bye</button>
+
+    <div id="submit_text"></div>
+    <script>
+        const chatForm = document.querySelector('#chat');
+        const ul = document.querySelector('ul');
+        const socket = io();
+        //이벤트 생성
+        socket.emit("open_message",{name:'client',message:'Hello server'}, (res)=>{
+            console.log("res",res);
+        });
+        //socket.emit("open_message",{name:'client',message:'Hello server'},100,true);
+        socket.on("back_message",(arg)=>{
+            const li = document.createElement('li')
+            li.textContent = `${arg.name}: ${arg.message}`;
+            ul.appendChild(li);
+        })
+        //실습
+        socket.on("back2_message",(arg)=>{
+            const text = document.querySelector('#submit_text');
+            text.textContent= `${arg.text} : ${arg.message}`;
+            console.log("back2",arg)
+        })
+        //socket.on()
+        //폼 이벤트
+        chatForm.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const user = chatForm.querySelector('#user');
+            const message = chatForm.querySelector('#message');
+            socket.emit("form_message",{name:user.value, message:message.value});
+        });
+
+        
+        const A = document.querySelector('#A');
+        const B = document.querySelector('#B');
+        const C = document.querySelector('#C');
+
+        A.addEventListener('click',(e)=>{
+            e.preventDefault();
+            
+            console.log("A");
+            
+            socket.emit("text_message",{text:'hello',message:A.value});
+        })
+
+        B.addEventListener('click',(e)=>{
+            e.preventDefault();
+            
+            console.log("B");
+            
+            socket.emit("text_message",{text:'study',message:B.value});
+        })
+        C.addEventListener('click',(e)=>{
+            e.preventDefault();
+            
+            console.log("C");
+            
+            socket.emit("text_message",{text:'bye',message:C.value});
+        })
+    </script>
+</body>
+</html>
