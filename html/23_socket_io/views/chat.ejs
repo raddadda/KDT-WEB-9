@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+    <style>
+        li{
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        #box{
+            width: 350px;
+            height: 500px;
+            background-color: skyblue;
+        }
+    </style>
+<body>
+    <div id="box">
+        <ul>
+        </ul>
+        
+    </div>
+    <form id="chat">
+        <input type="text" id="name" placeholder="닉네임" /><br/>
+        <input type="text" id="message" placeholder="채팅 내용" /><br/>
+        <button>채팅</button>
+        <button type="button" onclick="leave()">나가기</button>
+    </form>
+    <script>
+        const chatForm = document.querySelector("#chat");
+        const ul = document.querySelector("ul");
+        //클라이언트 소켓 연결
+        const socket = io();
+
+        //채팅방 생성
+        const chatRoom = prompt('채팅방명을 입력하세요');
+        socket.emit("join",chatRoom);
+
+        //브라우저 접속시 이벤트
+        socket.on('create',(res)=>{
+            const li = document.createElement('li');
+            li.textContent = res;
+            ul.appendChild(li);
+        })
+        //서버에서 보내는 값
+        socket.on('chat',(res)=>{
+            const li1 = document.createElement('li');
+            const d = document.createElement('span');
+            const li2 = document.createElement('li');
+            const d2 = document.createElement('span');
+            d.style.backgroundColor = "white";
+            d2.style.backgroundColor = "yellow";
+            // li.style.backgroundColor = "white";
+            d.style.borderRadius = "5px";
+            li2.style.textAlign = "right";
+            //li2.style.backgroundColor = "yellow";
+            d2.style.borderRadius = "5px";
+            //li.textContent = res;
+            console.log("@@@",res.chk);
+            
+            //본인이면
+            if(res.chk == 1){
+                d.textContent = `${res.data.name}: ${res.data.message}`;
+                li1.appendChild(d);
+                ul.appendChild(li1);
+            }else{
+                // li2.textContent = `${res.data.name}: ${res.data.message}`;
+                // ul.appendChild(li2);
+                d2.textContent = `${res.data.name}: ${res.data.message}`;
+                li2.appendChild(d2);
+                ul.appendChild(li2);
+            }
+            
+            
+        })
+        //폼 이벤트
+        chatForm.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const user = chatForm.querySelector('#name');
+            const msg = chatForm.querySelector('#message');
+            
+            socket.emit('message',{name: user.value, message:msg.value});
+            msg.value='';
+        })
+        function leave(){
+            console.log('leave');
+            socket.emit("leave");
+        }
+    </script>
+</body>
+</html>
