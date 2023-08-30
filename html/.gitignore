@@ -9,6 +9,10 @@
 /html/session/node_modules
 /html/19_jwt_practice/node_modules
 /html/23_socket_io/node_modules
+/html/23_socket_io_css/node_modules
+/html/23_socket_io_notice/node_modules
+/html/23_socket_io2/node_modules
+
 #!text.txt
 
 #해당 폴더 무시
