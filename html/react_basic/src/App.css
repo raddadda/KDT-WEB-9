@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.container > div:nth-child(n+2){
+  position: absolute;
+}
+
+.one {
+  position: relative;
+  background-color: rgb(87, 87, 255);
+}
+
+.two {
+  background-color: rgb(39, 39, 255);
+  left: 50px;
+  top: 70px;
+}
+
+.three {
+  background-color: rgb(150, 150, 255);
+  left: 120px;
+  top: 90px;
+}
+
+.four {
+  background-color: rgb(100, 100, 255);
+  left: 180px;
+  top: 110px;
+}
+
+.five {
+  background-color: rgb(200, 200, 255);
+  left: 240px;
+  top: 130px;
+  z-index: 6;
+}
+
+img {
+  position: absolute;
+  width: 500px;
+  z-index: 5;
+}
+
+.white-eye{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: 15px;
+}
+
+.black-eye{
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.food{
+  color: red;
+}
+
+.test4-best{
+  text-align: center;
+  color: orange;
+  font-family: 800;
+  font-size: 800;
+}
+.test4-info{
+  margin: 0 250px;
+}
+.test4-title{
+  font-weight: 900;
+  font-size: 900;
+  text-align: center;
+  margin-top: 250px;
+}
+.test4-img > img{ 
+  display: flex;
+  margin:0 25%;
+}
+.test4-body{
+
+  background-color: bisque;
+  width: 100%;
+  height: 800px;
+}
