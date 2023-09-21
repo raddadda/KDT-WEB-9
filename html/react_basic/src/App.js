@@ -15,6 +15,11 @@ import TestState from './TestState';
 import TestState2 from './TestState2';
 import TestState3 from './TestState3';
 import CounterFunc from './CounterFunc';
+import ToggleFunc from './ToggleFunc';
+import StateFunc from './StateFunc';
+import StateFunc3 from './StateFunc3';
+import StateFunc4 from './StateFunc4';
+import LifeCycleClass from './LifeCycleClass';
 function App() {
 
   return (
@@ -31,8 +36,9 @@ function App() {
     <EventClass></EventClass> */}
     {/* <TestClass5 message="전달받은 메시지"></TestClass5> */}
     {/* <Counter/> */}
-    {/* <TestState3></TestState3> */}
-    <CounterFunc></CounterFunc>
+    <LifeCycleClass></LifeCycleClass>
+    {/* <CounterFunc></CounterFunc> */}
+    {/* <ToggleFunc3></ToggleFunc3> */}
    </>
   );
 }
