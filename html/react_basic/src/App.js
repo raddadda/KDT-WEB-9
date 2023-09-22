@@ -19,12 +19,15 @@ import ToggleFunc from './ToggleFunc';
 import StateFunc from './StateFunc';
 import StateFunc3 from './StateFunc3';
 import StateFunc4 from './StateFunc4';
-import LifeCycleClass from './LifeCycleClass';
+import LifeCycleClass from './08.Lifecycle/LifeCycleClass';
+import LifeCycleFunc from './08.Lifecycle/LifeCycleFunc';
+import TsetUseEffect from './08.Lifecycle/TsetUseEffect';
+import TsetUseEffect2 from './08.Lifecycle/TsetUseEffect2';
 function App() {
 
   return (
    <>
-   
+    <TsetUseEffect2></TsetUseEffect2>
     {/* <TestClass></TestClass>
     <TestClass2></TestClass2> */}
     {/* <ClassComponent name="chan" age={10}></ClassComponent>
@@ -36,7 +39,7 @@ function App() {
     <EventClass></EventClass> */}
     {/* <TestClass5 message="전달받은 메시지"></TestClass5> */}
     {/* <Counter/> */}
-    <LifeCycleClass></LifeCycleClass>
+    {/* <StateFunc4></StateFunc4> */}
     {/* <CounterFunc></CounterFunc> */}
     {/* <ToggleFunc3></ToggleFunc3> */}
    </>

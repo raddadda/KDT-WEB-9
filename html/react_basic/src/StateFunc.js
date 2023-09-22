@@ -2,16 +2,6 @@ import {useState} from 'react';
 
 export default function ToggleFunc() {
 
-    // const red = {
-    //     color:'red'
-    // }
-    // const blue = {
-    //     color:'blue'
-    // }
-    // const black = {
-    //     color:'black'
-    // }
-
     const [text,setStatus] = useState('검정색 글씨')
     const [textColor,setStatus2] = useState('black')
 

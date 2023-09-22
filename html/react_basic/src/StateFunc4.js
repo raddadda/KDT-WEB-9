@@ -7,7 +7,7 @@ export default function StateFunc4() {
     const [inputTodos,setInputTodo] = useState('');
 
     const addToto = () => {
-        if(todos.length >10 ){
+        if(todos.length >=10 ){
             alert('할 일이 너무 많아요!');
         }
         if(inputTodos !== ''){
